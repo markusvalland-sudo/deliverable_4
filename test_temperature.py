@@ -5,7 +5,7 @@ import pytest
 from temperature import Temperature
 
 
-# ---------- 1. Initialization ----------
+#  1. Initialization
 def test_default_unit():
     assert Temperature(20).unit == "C"
 
@@ -22,7 +22,7 @@ def test_read_only_attributes():
         t.unit = "K"
 
 
-# ---------- 2. Validation ----------
+#  2. Validation
 def test_invalid_unit():
     with pytest.raises(ValueError):
         Temperature(10, "X")
@@ -37,7 +37,7 @@ def test_below_absolute_zero():
         Temperature(-1, "K")
 
 
-# ---------- 3. Conversions ----------
+#  3. Conversions 
 @pytest.mark.parametrize("c, f, k", [
     (-273.15, -459.67, 0.0),   # absolute zero
     (-40, -40, 233.15),        # Celsius-Fahrenheit crossover
@@ -53,14 +53,14 @@ def test_conversions(c, f, k):
     assert Temperature(k, "K").to_celsius() == pytest.approx(c)
 
 
-# ---------- 4. Round-trip conversion ----------
+# 4. Round-trip conversion 
 def test_round_trip():
     original = Temperature(25, "C")
     back = original.convert_to("F").convert_to("K").convert_to("C")
     assert back == original
 
 
-# ---------- 5. Cross-unit comparisons ----------
+#  5. Cross-unit comparisons 
 def test_cross_unit_equality():
     assert Temperature(0, "C") == Temperature(32, "F")
 
@@ -72,7 +72,7 @@ def test_cross_unit_ordering():
     assert Temperature(373.15, "K") >= Temperature(212, "F")
 
 
-# ---------- 6. Formatting ----------
+#  6. Formatting 
 def test_str():
     assert str(Temperature(25, "C")) == "25.00 °C"
 

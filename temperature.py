@@ -76,7 +76,7 @@ class Temperature:
     def __ne__(self, other):
         if not isinstance(other, Temperature):
             return NotImplemented
-        return not self == other
+        return not self == other    
 
     def __lt__(self, other):
         if not isinstance(other, Temperature):
@@ -97,3 +97,5 @@ class Temperature:
         if not isinstance(other, Temperature):
             return NotImplemented
         return self.to_kelvin() > other.to_kelvin() or self == other
+
+
