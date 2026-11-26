@@ -2,7 +2,6 @@
 
 
 class Temperature:
-    """A temperature with a value and a unit ('C', 'F' or 'K')."""
 
     VALID_UNITS = ("C", "F", "K")
     TOL = 1e-9
