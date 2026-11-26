@@ -20,7 +20,7 @@ class Temperature:
             raise ValueError(f"Invalid unit: {unit!r}. Use 'C', 'F' or 'K'.")
         return unit.upper()
 
-    # ---------- Read-only attributes ----------
+    #  Read-only attributes 
     @property
     def value(self) -> float:
         return self._value
@@ -29,7 +29,7 @@ class Temperature:
     def unit(self) -> str:
         return self._unit
 
-    # ---------- Conversions ----------
+    #  Conversions 
     def to_celsius(self) -> float:
         if self._unit == "C":
             return self._value
@@ -60,14 +60,14 @@ class Temperature:
         }
         return Temperature(converters[target](), target)
 
-    # ---------- String representations ----------
+    # String representations
     def __repr__(self) -> str:
         return f"Temperature({self._value!r}, {self._unit!r})"
 
     def __str__(self) -> str:
         return f"{self._value:.2f} °{self._unit}"
 
-    # ---------- Comparisons (done in Kelvin, with tolerance) ----------
+    # Comparisons (done in Kelvin, with tolerance)
     def __eq__(self, other):
         if not isinstance(other, Temperature):
             return NotImplemented
