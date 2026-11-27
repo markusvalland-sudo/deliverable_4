@@ -23,7 +23,7 @@ class Fraction:
         self._denominator = denominator // common
 
     #  Read-only attributes
-    @property
+    @propertyjupyter
     def numerator(self) -> int:
         return self._numerator
 
