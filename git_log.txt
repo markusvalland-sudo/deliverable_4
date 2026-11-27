@@ -1,0 +1,12 @@
+* 21c70b1d - Markus Valland, 2 minutes ago : Remove old notebook, venv and pycache
+*   7ab1fee7 - Markus Valland, 3 minutes ago : prøver igjen
+|\  
+| * c564736d - Markus Valland, 23 hours ago : lest ferdig oppgave 1
+| * f1631fcb - Markus Valland, 24 hours ago : oppgave 1
+| * 374a44b1 - Markus Valland, 24 hours ago : notebook
+| * 9359a8e4 - Markus Valland, 25 hours ago : oppgave 1 .
+| * e22797cf - Markus Valland, 25 hours ago : Add Temperature class and tests
+| * 400db355 - Markus Valland, 2 days ago : task 1
+* 0e98f9d2 - Markus Valland, 4 minutes ago : Remove venv from repo
+* 3a0c039a - Markus Valland, 8 minutes ago : Add .gitignore and remove venv from repo
+* a197b10e - Markus Valland, 16 minutes ago : problemer
